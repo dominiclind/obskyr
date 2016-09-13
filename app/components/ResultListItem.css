@@ -1,0 +1,39 @@
+.result-list-item{
+  background:white;
+  padding: 1em;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  position:relative;
+
+  .track-thumb { 
+    display:block;
+    width: 50px;
+    height: 50px;
+    background-size:cover;
+    position:absolute;
+    left: 1em;
+    top: 50%;
+    margin-top: -25px;
+  }
+  .track-title {
+    font-size: 14px;
+    margin-left: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: calc(30px + .5em);
+  }
+  .track-source {
+    display:none;
+  }
+  .track-progress {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    margin-top:-15px;
+  }
+
+  &.playing {
+    background:rgba(0,0,0,.2);
+  }
+}

@@ -15,18 +15,11 @@ const config = merge(baseConfig, {
   module: {
     loaders: [
       {
-        test: /\.global\.css$/,
+        test: /\.css$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader'
-        )
-      },
-
-      {
-        test: /^((?!\.global).)*\.css$/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+          'css-loader',
+          'postcss-loader'
         )
       }
     ]

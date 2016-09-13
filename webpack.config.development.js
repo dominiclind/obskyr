@@ -18,27 +18,6 @@ export default merge(baseConfig, {
   output: {
     publicPath: `http://localhost:${port}/dist/`
   },
-
-  module: {
-    loaders: [
-      {
-        test: /\.global\.css$/,
-        loaders: [
-          'style-loader',
-          'css-loader?sourceMap'
-        ]
-      },
-
-      {
-        test: /^((?!\.global).)*\.css$/,
-        loaders: [
-          'style-loader',
-          'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
-        ]
-      }
-    ]
-  },
-
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
