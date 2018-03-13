@@ -5,7 +5,7 @@ const API_KEY = `AIzaSyACuDTzDGrS1BcRjp1JxCoNVnYJvcT2IIs`;
 
 const YouTube = {
   searchYT: (search) => {
-    const API_URL = `https://www.googleapis.com/youtube/v3/search?part=id%2Csnippet&type=video&q=${search}&maxResults=20&videoEmbeddable=true&key=${API_KEY}`;
+    const API_URL = `https://www.googleapis.com/youtube/v3/search?part=id%2Csnippet&type=video&q=${search}&maxResults=40&videoEmbeddable=true&key=${API_KEY}`;
 
     return new Promise((resolve, reject) => {
       axios.get(API_URL).then(response => {

@@ -29,8 +29,8 @@ class HomePage extends Component {
   }
   render() {
     const { fetching, results } = api;
-    //const { playing } = player;
-    const playing = false;
+    const { playing } = player;
+    //const playing = false;
     return (
       <div className={`container ${playing ? 'playing' : ''}`}>
         <SearchInput onSearch={(query) => this.onSearch(query) }/>

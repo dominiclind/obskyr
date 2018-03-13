@@ -9,9 +9,7 @@ class ResultList extends Component {
     const { results = [] } = this.props;
     return (
       <div className="result-list">
-        {results.map((track,i) => (
-          <ResultListItem key={i} track={track} />
-        ))}
+        {results.map((track, i) => <ResultListItem key={i} track={track} />)}
       </div>
     );
   }
